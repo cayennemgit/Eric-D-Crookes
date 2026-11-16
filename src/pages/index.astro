@@ -6,7 +6,7 @@ import Purchase from '../components/Purchase.astro';
 import ArtworkCarousel from '../components/ArtworkCarousel.astro';
 ---
 <Layout>
-  <Hero title="Gallery" caption="The many masterful marks of Eric D. Crookes" />
+  <Hero title="Gallery" caption="The many masterful marks of Eric D. Crookes" image="/hero-images/hero-gallery.jpg" />
   <section id="gallery" class="gallery" aria-label="Artwork gallery">
     {artworks.map(work => <article class="artwork">
       <h3>{work.label} - {work.year || 'Year to be confirmed'}</h3><ArtworkCarousel work={work} />
@@ -19,7 +19,30 @@ import ArtworkCarousel from '../components/ArtworkCarousel.astro';
     </article>)}
   </section>
   <section class="end-note"><h2>Add Art to<br/><em>Your Everyday</em></h2></section>
+  <a class="back-to-top" href="#top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 12 6-6 6 6M12 6v14" /></svg>
+    <span>Back to top</span>
+  </a>
 </Layout>
+<style>
+  .back-to-top {
+    position: fixed;
+    right: max(20px, env(safe-area-inset-right));
+    bottom: max(20px, env(safe-area-inset-bottom));
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 12px 16px;
+    background: var(--green);
+    color: var(--paper);
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: 0 3px 14px #0005;
+  }
+  .back-to-top:hover { background: #cfc2a2; }
+</style>
 <script>
   document.querySelectorAll<HTMLDetailsElement>('.artwork details').forEach(details => {
     const content = details.querySelector<HTMLElement>('.art-details');

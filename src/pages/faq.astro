@@ -11,4 +11,4 @@ const faqs = [
  ['What is the return policy?', 'The return and refund policy will be published before purchases become available.'],
 ];
 ---
-<Layout title="FAQs"><Hero title="FAQs" caption="You're not the first to ask, but you are the best looking" /><section class="faq-list" aria-label="Frequently asked questions">{faqs.map(([question,answer]) => <details name="faq"><summary>{question}<span class="plus">+</span></summary><p>{answer}</p></details>)}</section></Layout>
+<Layout title="FAQs"><Hero image="/hero-images/hero-FAQs.jpg" title="FAQs" caption="You're not the first to ask, but you are the best looking" /><section class="faq-list" aria-label="Frequently asked questions">{faqs.map(([question,answer]) => <details name="faq"><summary>{question}<span class="plus">+</span></summary><p>{answer}</p></details>)}</section></Layout>

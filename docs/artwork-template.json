@@ -1,0 +1,34 @@
+{
+  "id": "sunset",
+  "title": "Sunset",
+  "image": "sunset.jpg",
+  "alt": "Replace with a description of what appears in the painting",
+  "year": "",
+  "medium": "",
+  "dimensions": "",
+  "description": "",
+  "order": 30,
+  "published": false,
+  "products": {
+    "original": {
+      "price": "",
+      "purchaseUrl": "",
+      "details": ""
+    },
+    "print": {
+      "price": "",
+      "purchaseUrl": "",
+      "details": ""
+    },
+    "mug": {
+      "price": "",
+      "purchaseUrl": "",
+      "details": ""
+    },
+    "shirt": {
+      "price": "",
+      "purchaseUrl": "",
+      "details": ""
+    }
+  }
+}

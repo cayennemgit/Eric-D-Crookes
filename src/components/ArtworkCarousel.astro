@@ -4,8 +4,8 @@ const views = ['Artwork', 'Close-up', 'Mug', 'Shirt'];
 ---
 <section class="carousel" aria-label={`${work.label} image views`} aria-roledescription="carousel" data-carousel>
   <div class="carousel-stage">
-    {views.map((label, i) => <div class={`carousel-slide view-${i}`} data-slide hidden={i !== 0} role="group" aria-roledescription="slide" aria-label={`${i + 1} of 4: ${label}`}>
-      {i < 2 ? <img src={work.image} alt={i === 0 ? work.alt : `Close-up detail: ${work.alt}`} loading="lazy" /> : <div class={`photo-mockup ${i === 2 ? 'mug-photo' : 'shirt-photo'}`} role="img" aria-label={`Illustrative ${i === 2 ? 'mug' : 'shirt'} mockup featuring ${work.label}`}><img class="mockup-background" src={i === 2 ? "/merch/mug.jpg" : "/merch/shirt.png"} alt="" loading="lazy" /><div class="product-print"><img src={work.image} alt="" loading="lazy" /></div></div>}
+    {views.map((label, i) => <div class={`carousel-slide view-${i}`} data-slide hidden={i !== 0} role="group" aria-roledescription="slide" aria-label={`${i + 1} of ${views.length}: ${label}`}>
+      {i < 2 ? <img src={work.image} alt={i === 0 ? work.alt : `Close-up detail: ${work.alt}`} loading="lazy" /> : <div class={`photo-mockup ${i === 2 ? 'mug-photo' : 'shirt-photo'}`} role="img" aria-label={`Illustrative ${i === 2 ? 'mug' : 'shirt'} mockup featuring ${work.label}`}><img class="mockup-background" src={i === 2 ? '/merch/mug.jpg' : '/merch/shirt.png'} alt="" loading="lazy" /><div class="product-print"><img src={work.image} alt="" loading="lazy" /></div></div>}
       {i >= 2 && <span class="mockup-caption">Illustrative mockup · final product may differ</span>}
     </div>)}
   </div>
