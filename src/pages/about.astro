@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+<Layout title="Artist"><Hero title="Artist" caption="Everyone is asking 'who is this guy and where does he get off creating masterpices hither and thither'" /><section class="artist-journey" aria-label="Eric’s artistic journey">
+  <div class="journey-row">
+    <div class="journey-image"><img src="/image-1.jpg" alt="A bundled-up man with frost on his beard in a snowy setting" loading="lazy" /></div>
+    <div class="journey-copy"><p>Born and raised in Calgary, Alberta, Eric D. Crookes spends the harsh winters making cool stuff.</p></div>
+  </div>
+  <div class="journey-row journey-row-reversed">
+    <div class="journey-copy"><p>Eric spent parts of his childhood in Spain and England, where the works of Pablo Picasso and Salvador Dalí captured his imagination and later influenced his artistic vision.</p></div>
+    <div class="journey-image"><img src="/image-2.jpg" alt="Expressive abstract figures in blue and purple against a yellow background" loading="lazy" /></div>
+  </div>
+  <div class="journey-row">
+    <div class="journey-image"><img src="/image-3.png" alt="An artist seated in a studio filled with paintings, brushes, and sketchbooks" loading="lazy" /></div>
+    <div class="journey-copy"><p>Eric did not seriously pursue drawing or painting until his fifties. Today, creating art is part of his daily life, driven by emotion, personal experiences, and imagination.</p></div>
+  </div>
+</section><section class="statement"><p class="eyebrow">IN THE ARTIST’S WORDS</p><blockquote>“I simply put marks down on paper or canvas, step back, and study what emerges.”</blockquote><p>“Art is deeply personal to the viewer; whatever the viewer sees in it is the true reality of the piece.”</p><a class="button" href="/">See the gallery</a></section></Layout>

@@ -1,0 +1,24 @@
+ERIC D. CROOKES — WEBSITE REVIEW
+
+1. Install Node.js 24 LTS from https://nodejs.org/ (use the standard installer).
+   If you already have Node.js 24 installed, skip this step.
+2. Extract the entire ZIP. Keep the included files and dist folder together.
+3. Mac: double-click Preview-Mac.command.
+   Windows: double-click Preview-Windows.bat.
+4. Your browser should open the website automatically. If it does not, copy
+   the review URL printed in the terminal window into your browser.
+
+Keep the terminal window open during your review. Press Control+C to stop.
+Nothing is published online. The preview is available only on your computer.
+Checkout buttons are placeholders until real Stripe checkout links are added.
+
+If macOS blocks the launcher or says you do not have permission:
+Open Terminal, type "cd " (with a trailing space), drag the extracted folder
+into Terminal, and press Enter. Then run:
+node preview.mjs
+
+If Windows cannot find Node.js after installation, close the launcher and
+open it again. You may need to restart your computer.
+
+No npm install or build command is needed. This package already contains
+the built website. No internet connection is needed after Node.js is installed.

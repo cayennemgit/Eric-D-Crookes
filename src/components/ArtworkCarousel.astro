@@ -1,0 +1,34 @@
+---
+const { work } = Astro.props;
+const views = ['Artwork', 'Close-up', 'Mug', 'Shirt'];
+---
+<section class="carousel" aria-label={`${work.label} image views`} aria-roledescription="carousel" data-carousel>
+  <div class="carousel-stage">
+    {views.map((label, i) => <div class={`carousel-slide view-${i}`} data-slide hidden={i !== 0} role="group" aria-roledescription="slide" aria-label={`${i + 1} of 4: ${label}`}>
+      {i < 2 ? <img src={work.image} alt={i === 0 ? work.alt : `Close-up detail: ${work.alt}`} loading="lazy" /> : <div class={`photo-mockup ${i === 2 ? 'mug-photo' : 'shirt-photo'}`} role="img" aria-label={`Illustrative ${i === 2 ? 'mug' : 'shirt'} mockup featuring ${work.label}`}><img class="mockup-background" src={i === 2 ? "/merch/mug.jpg" : "/merch/shirt.png"} alt="" loading="lazy" /><div class="product-print"><img src={work.image} alt="" loading="lazy" /></div></div>}
+      {i >= 2 && <span class="mockup-caption">Illustrative mockup · final product may differ</span>}
+    </div>)}
+  </div>
+  <div class="view-buttons" aria-label="Choose an image">{views.map((label,i) => <button type="button" data-view={i} aria-pressed={i === 0}>{label}</button>)}</div>
+</section>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-carousel]').forEach(carousel => {
+    const slides = Array.from(carousel.querySelectorAll<HTMLElement>('[data-slide]'));
+    const buttons = Array.from(carousel.querySelectorAll<HTMLButtonElement>('[data-view]'));
+    const details = carousel.closest('.artwork')?.querySelector<HTMLDetailsElement>('details');
+    let current = 0;
+    function show(index: number) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.hidden = i !== current);
+      buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === current)));
+      carousel.closest('.artwork')?.dispatchEvent(new CustomEvent('artwork-view-change', { detail: { index: current } }));
+      if (details) details.open = true;
+    }
+    buttons.forEach((button, i) => button.addEventListener('click', () => show(i)));
+    carousel.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+        event.preventDefault(); show(current + (event.key === 'ArrowRight' ? 1 : -1));
+      }
+    });
+  });
+</script>

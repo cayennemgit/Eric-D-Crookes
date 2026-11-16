@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import { artworks } from '../data/artworks';
+import Purchase from '../components/Purchase.astro';
+import ArtworkCarousel from '../components/ArtworkCarousel.astro';
+---
+<Layout>
+  <Hero title="Gallery" caption="The many masterful marks of Eric D. Crookes" />
+  <section id="gallery" class="gallery" aria-label="Artwork gallery">
+    {artworks.map(work => <article class="artwork">
+      <h3>{work.label} - {work.year || 'Year to be confirmed'}</h3><ArtworkCarousel work={work} />
+      <details id={work.id}><summary><span class="details-chevron" aria-hidden="true"></span><span>Artwork details & prices</span></summary><div class="art-details"><div class="artwork-information">
+        <p class="artwork-detail-title">{work.label}</p>
+        <p><span>Year:</span> {work.year || 'To be confirmed'}</p>
+        <p><span>Medium:</span> {work.medium}</p>
+        <p><span>Description:</span> {work.description || 'Description to be added.'}</p>
+      </div><Purchase label="Original" price={work.originalPrice} link={work.originalLink} details={work.originalDetails} /><Purchase label="Print" price={work.printPrice} link={work.printLink} details={work.printDetails} /><Purchase label="Mug" price={work.mugPrice} link={work.mugLink} details={work.mugDetails} /><Purchase label="T-shirt" price={work.shirtPrice} link={work.shirtLink} details={work.shirtDetails} /></div></details>
+    </article>)}
+  </section>
+  <section class="end-note"><h2>Add Art to<br/><em>Your Everyday</em></h2></section>
+</Layout>
+<script>
+  document.querySelectorAll<HTMLDetailsElement>('.artwork details').forEach(details => {
+    const content = details.querySelector<HTMLElement>('.art-details');
+    let animation: Animation | undefined;
+    const card = details.closest('.artwork');
+    const products = Array.from(details.querySelectorAll<HTMLElement>('[data-product]'));
+    let filtered = false;
+    card?.addEventListener('artwork-view-change', event => {
+      const index = (event as CustomEvent<{ index: number }>).detail.index;
+      const visible = index < 2 ? ['original', 'print'] : index === 2 ? ['mug'] : ['t-shirt'];
+      products.forEach(product => product.hidden = !visible.includes(product.dataset.product || ''));
+      filtered = true;
+    });
+    details.querySelector('summary')?.addEventListener('click', event => {
+      if (filtered) {
+        event.preventDefault();
+        products.forEach(product => product.hidden = false);
+        filtered = false;
+        details.open = true;
+      }
+    });
+    details.addEventListener('toggle', () => {
+      animation?.cancel();
+      if (!content) return;
+      content.style.removeProperty('overflow');
+      if (!details.open || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      content.style.overflow = 'hidden';
+      animation = content.animate(
+        [{ height: '0px', opacity: 0 }, { height: `${content.scrollHeight}px`, opacity: 1 }],
+        { duration: 1200, easing: 'cubic-bezier(0.25, 0.8, 0.25, 1)' }
+      );
+      animation.onfinish = () => content.style.removeProperty('overflow');
+    });
+  });
+</script>

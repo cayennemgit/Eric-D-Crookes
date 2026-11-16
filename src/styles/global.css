@@ -1,0 +1,246 @@
+:root{--paper:#20211f;--ink:#f5f1e9;--muted:#c5c2ba;--line:#494943;--green:#e3d7b9;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);font-size:18px;font-synthesis:none;color-scheme:dark}*{box-sizing:border-box}body{margin:0}a{color:inherit}img{max-width:100%;display:block}button,a,summary{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #f5d88f;outline-offset:5px}a,button,summary{touch-action:manipulation}.skip{position:fixed;top:-100px;background:var(--paper);z-index:10;padding:20px}.skip:focus{top:0}.site-header{margin:0 5%;padding:28px 0;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:24px}.brand{text-decoration:none;font-family:Georgia,serif;font-size:32px;white-space:nowrap}nav{display:flex;gap:12px;flex-wrap:wrap}nav a,.button,.carousel button{font-size:18px;text-decoration:none;padding:14px 23px;border:1px solid #8d8a80;border-radius:0;min-height:52px;display:inline-flex;align-items:center;justify-content:center;background:#171715;color:var(--ink);line-height:1.35}nav a[aria-current],nav a:hover,.button:hover,.carousel button:hover{background:#e3d7b9;color:#171713;border-color:#e3d7b9}main{max-width:1600px;margin:auto}.hero{position:relative;isolation:isolate;min-height:570px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#222}.hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.65);filter:blur(4px);z-index:-2}.hero:after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.32);z-index:-1}.hero-content{text-align:center;padding:75px 6%;width:100%}.hero h1{font-size:clamp(48px,6vw,84px);text-shadow:0 2px 12px #000}.hero h1 em{color:#f2dfb3}.hero-content>p{font-size:21px}.hero-nav{justify-content:center;margin-top:35px;gap:16px}.hero-nav a{background:rgba(0,0,0,.8);font-family:Georgia,serif;font-size:23px;min-width:170px;padding:18px 25px;border-color:#d3c7ad}.hero-nav a:hover{background:var(--green)}h1,h2,h3,blockquote{font-family:Georgia,'Times New Roman',serif;font-weight:400}h1{font-size:clamp(48px,5.5vw,84px);line-height:1.1;letter-spacing:-1.5px;margin:0}em{font-weight:400;color:#dacaa6}h2{font-size:42px;line-height:1.2}h3{font-size:32px;margin:0 0 25px}p{line-height:1.8}.eyebrow{font-size:16px;letter-spacing:1.6px;font-weight:600;margin:0 0 28px}.text-link{font-size:18px;text-underline-offset:7px;display:inline-block;padding:15px 0}.gallery,.shop-section{padding:0 8%}.section-label{display:flex;justify-content:space-between;align-items:center;padding:50px 0 40px;gap:20px}.section-label h2{font-size:36px;margin:0;scroll-margin-top:25px}.section-label>span{font-size:18px;color:var(--muted)}.artwork{margin:0 auto 100px}.artwork summary{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;gap:24px;cursor:pointer;list-style:none;background:#191917;border:1px solid #8d8a80;border-radius:0;font-size:20px;min-height:60px;margin-top:25px}summary::-webkit-details-marker{display:none}.plus{font:30px Georgia,serif;display:inline-block;transition:transform .2s}details[open]>summary .plus{transform:rotate(45deg)}.art-details{margin-top:15px;padding:12px 0}.art-details>p,.shop-grid p{font-size:18px;color:var(--muted)}.purchase{border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;font-size:20px}.purchase strong{display:block;font-size:18px;font-weight:400;color:var(--muted);margin-top:7px}.unavailable{font-size:18px;color:var(--muted)}.button{background:var(--green);color:#171713;border-color:var(--green)}.end-note{padding:65px 8% 85px;background:#181815;text-align:center}.end-note h2{font-size:48px;margin:0 0 30px}footer{padding:40px 5%;display:flex;align-items:center;justify-content:space-between;gap:25px;border-top:1px solid var(--line)}footer span,footer small{font-size:16px;color:var(--muted)}.footer-name{font:26px Georgia,serif;text-decoration:none}.page-intro{padding:85px 8% 70px;max-width:950px}.page-intro>p:not(.eyebrow){font-size:20px;max-width:640px;color:var(--muted);margin-top:28px}.page-intro>small{font-size:18px}.shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px}.product-art{width:100%;height:350px;object-fit:contain;background:#181818;padding:25px}.shop-grid h3{margin-top:25px}.merch{margin:80px 8%;padding:50px;background:#181815;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px}.merch p:not(.eyebrow){font-size:18px;color:var(--muted)}.merch figure{margin:0}.merch img{max-height:420px;margin:auto}.merch figcaption{font-size:16px;text-align:center;margin-top:15px;color:var(--muted)}.story{margin:0 8% 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.story-image img{width:100%;height:600px;object-fit:cover}.prose p:not(.eyebrow){font-size:18px;color:var(--muted)}.statement{padding:65px 15%;background:#181815;text-align:center}.statement blockquote{font-size:38px;line-height:1.4;margin:20px 0}.statement>p:not(.eyebrow){font-size:20px;max-width:670px;margin:25px auto}.faq-list{margin:0 8% 100px;max-width:1000px}.faq-list details{border-top:1px solid var(--line);padding:24px 0}.faq-list details:last-child{border-bottom:1px solid var(--line)}.faq-list summary{display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;font-size:22px;list-style:none;min-height:52px}.faq-list p{font-size:18px;color:var(--muted);max-width:750px}
+.carousel-stage{height:550px;background:#151513;border:1px solid #33332f;overflow:hidden}.carousel-slide{height:100%;position:relative;display:flex;align-items:center;justify-content:center;padding:30px;overflow:hidden}.carousel-slide[hidden]{display:none}.carousel-slide>img{width:100%;height:100%;object-fit:contain}.view-1>img{object-fit:cover;transform:scale(1.9)}.view-2,.view-3{background:radial-gradient(ellipse at center,#474741,#1b1b18)}.mockup-caption{position:absolute;bottom:15px;left:12px;right:12px;text-align:center;font-size:16px;color:#eee}.carousel-controls{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:20px}.carousel-status{margin:0;font-size:18px;text-align:center;color:var(--muted)}.view-buttons{display:flex;gap:14px;margin-top:20px;flex-wrap:wrap}.view-buttons button{flex:1}.carousel button[aria-pressed=true]{background:var(--green);color:#171713;border-color:var(--green);box-shadow:inset 0 0 0 2px #171713;font-weight:700}.mug-mockup{width:275px;height:270px;background:linear-gradient(90deg,#bbb,#fff 23%,#f5f5f5 65%,#bbb);border-radius:12px 12px 55px 55px;position:relative;box-shadow:0 30px 35px #0006;isolation:isolate}.mug-mockup:before{content:'';position:absolute;top:35px;right:-78px;width:100px;height:150px;border:24px solid #dedede;border-radius:15px 60px 70px 15px;z-index:-1}.mug-mockup:after{content:'';position:absolute;left:0;right:0;top:-7px;height:20px;border-radius:50%;background:#b9b9b9;border:6px solid #ededed}.mug-mockup .product-print{position:absolute;inset:35px 20px 38px;overflow:hidden;border-radius:4px 4px 20px 20px}.product-print img{width:100%;height:100%;object-fit:contain}.mug-mockup .product-print img{object-fit:cover}.shirt-mockup{width:370px;height:390px;background:linear-gradient(100deg,#bbb,#eee 45%,#ccc);clip-path:polygon(28% 0,38% 0,42% 6%,58% 6%,62% 0,72% 0,100% 18%,88% 40%,76% 32%,78% 100%,22% 100%,24% 32%,12% 40%,0 18%);position:relative}.shirt-mockup:before{content:'';position:absolute;top:-8px;left:38%;width:24%;height:35px;border-radius:0 0 50% 50%;background:#777}.shirt-mockup .product-print{position:absolute;top:23%;left:30%;width:40%;height:48%}
+@media(min-width:1600px){.site-header,footer{max-width:1440px;margin:auto}}@media(max-width:1050px){.site-header{align-items:flex-start;flex-direction:column;gap:22px}.story{gap:35px}.section-label{align-items:flex-start;flex-direction:column}}
+@media(max-width:750px){.site-header{padding:24px 0}.brand{font-size:29px}.site-header nav{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:10px}nav a{font-size:18px;padding:13px 12px}.hero{min-height:550px}.hero-content{padding:55px 6%}.hero-nav{display:grid;grid-template-columns:1fr 1fr;gap:12px}.hero-nav a{font-size:20px;min-width:0;padding:17px 10px}.hero-content>p{font-size:18px}h1{letter-spacing:-1px}.gallery,.shop-section{padding:0 6%}.section-label{gap:12px;padding:35px 0}.section-label h2{font-size:32px}.artwork{margin-bottom:65px}h3{font-size:28px}.carousel-stage{height:390px}.carousel-slide{padding:15px}.carousel-controls{gap:12px;flex-wrap:wrap}.carousel-controls button{flex:1;padding:14px}.carousel-status{order:3;width:100%}.view-buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px}.view-buttons button{padding:14px 12px}.mug-mockup{width:205px;height:220px;margin-right:30px}.mug-mockup:before{right:-55px;width:75px;height:125px;border-width:20px}.shirt-mockup{width:280px;height:300px}.mockup-caption{font-size:16px;line-height:1.4}.end-note{padding:50px 6%}.end-note h2{font-size:36px}footer{align-items:flex-start;flex-direction:column;gap:18px;padding:32px 6%}.page-intro{padding:55px 6%}.shop-grid{grid-template-columns:1fr;gap:45px}.product-art{height:320px}.merch{margin:50px 6%;padding:28px;grid-template-columns:1fr;gap:25px}.merch h2,.prose h2{font-size:34px}.story{margin:0 6% 50px;grid-template-columns:1fr;gap:35px}.story-image img{height:auto}.statement{padding:45px 6%}.statement blockquote{font-size:29px}.faq-list{margin:0 6% 65px}.faq-list summary{font-size:20px}.purchase{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Shared page hero: a consistent title and caption over the same artwork. */
+.hero-content{text-align:left}
+.hero h1{display:table;position:relative;max-width:100%;padding:16px 28px 16px 0;background:var(--green);color:var(--paper);text-shadow:none;font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;letter-spacing:.01em}
+.hero h1:before{content:'';position:absolute;top:0;bottom:0;right:100%;width:100vw;background:var(--green)}
+.hero-content>p{max-width:800px;margin:18px 0 0;line-height:1.7}
+.hero+.story,.hero+.faq-list{margin-top:65px}
+.site-header{padding:18px 0}
+.hero{min-height:200px;align-items:flex-start}
+.hero-content{padding:28px 6%}
+@media(max-width:750px){
+  .site-header{padding:16px 0}
+  .hero{min-height:180px}
+  .hero-content{padding:24px 6%}
+}
+
+/* Compact horizontal button spacing while preserving generous click height. */
+nav a,.button,.carousel button{padding-left:14px;padding-right:14px}
+@media(max-width:750px){
+  nav a,.button,.carousel button{padding-left:10px;padding-right:10px}
+}
+
+.hero+.gallery{padding-top:50px}
+
+/* Match the artwork view buttons in the main navigation. */
+.site-header nav a[aria-current="page"]{background:var(--green);color:#171713;border-color:var(--green);box-shadow:inset 0 0 0 2px #171713;font-weight:700}
+
+/* Group each artwork, its image controls, and details in a softer charcoal panel. */
+.artwork{background:#2a2b28;padding:24px;border:0}
+.carousel .carousel-stage{border:0}
+@media(max-width:750px){.artwork{padding:14px}}
+
+.artwork>h3{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:300;font-size:24px;text-align:center}
+
+/* Highlight the full expanded FAQ, including its question and answer. */
+.faq-list details{padding-left:20px;padding-right:20px}
+.faq-list details[open]{background:#2a2b28}
+
+/* Split hero: title panel on the left, caption over artwork on the right. */
+.hero-content{display:grid;grid-template-columns:1fr 2fr;min-height:inherit;padding:0;align-items:stretch}
+.hero h1{display:flex;align-items:center;margin:0;padding:28px 12%;background:rgba(227,215,185,.85);font-size:clamp(40px,4.5vw,68px);overflow-wrap:break-word;min-width:0}
+.hero h1:before{content:none}
+.hero-content>p{display:flex;align-items:center;max-width:none;margin:0;padding:32px 9%;font-size:22px;text-shadow:none}
+@media(max-width:750px){
+  .hero-content{grid-template-columns:1fr 2fr;padding:0}
+  .hero h1{font-size:clamp(26px,5.3vw,40px);padding:24px 10%;overflow-wrap:anywhere}
+  .hero-content>p{font-size:18px;padding:24px 9%}
+}
+
+/* Shorter buttons across navigation, purchases, and artwork controls. */
+nav a,.button,.carousel button{min-height:44px;padding-top:9px;padding-bottom:9px}
+.artwork summary{min-height:44px;padding-top:10px;padding-bottom:10px}
+
+.statement blockquote{color:var(--green)}
+
+/* Soften the title panel into the artwork along its right edge. */
+.hero h1{background:linear-gradient(to right,rgba(227,215,185,.85) 0%,rgba(227,215,185,.85) 82%,rgba(227,215,185,0) 100%)}
+/* Touch devices retain the caption; pointer and keyboard users can reveal it. */
+@media(hover:hover) and (pointer:fine){
+  .hero-content>p{opacity:0;transition:opacity .25s ease}
+  .hero:hover .hero-content>p,.hero:focus-within .hero-content>p{opacity:1}
+  .hero:focus-visible{outline:2px solid var(--green);outline-offset:-2px}
+}
+
+.hero-content>p{color:var(--green)}
+
+/* Separate artist name above the hero and navigation below it. */
+.site-header{display:block;max-width:1600px;margin:0 auto;padding:0;border:0;background:var(--green);color:var(--paper)}
+.site-header .brand{display:block;padding:20px 6%}
+.site-nav{padding:18px 6%;background:#2a2b28;gap:12px}
+.site-nav a[aria-current="page"]{background:var(--green);color:#171713;border-color:var(--green);box-shadow:inset 0 0 0 2px #171713;font-weight:700}
+.site-nav+.gallery{padding-top:50px}
+.site-nav+.story,.site-nav+.faq-list{margin-top:65px}
+@media(max-width:750px){
+  .site-header{padding:0}
+  .site-header .brand{padding:18px 6%}
+  .site-nav{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px 6%}
+}
+
+.site-header .brand{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;white-space:normal}
+.artist-description{font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:400;line-height:1.6}
+@media(max-width:750px){.site-header .brand{gap:8px 16px}.artist-description{font-size:16px}}
+
+/* Left-side disclosure arrow for artwork details. */
+.artwork summary{justify-content:flex-start;gap:16px}
+.details-chevron{display:inline-block;width:10px;height:10px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);flex-shrink:0}
+.artwork details[open]>summary .details-chevron{transform:rotate(45deg)}
+
+/* Light buttons with dark selected states and a light inset border. */
+nav a,.button,.carousel button,.artwork summary{background:var(--green);color:var(--paper);border:0}
+nav a:hover,.button:hover,.carousel button:hover,.artwork summary:hover{background:#cfc2a2;color:var(--paper)}
+.site-nav a[aria-current="page"],.carousel button[aria-pressed="true"],.artwork details[open]>summary{background:#171713;color:var(--green);border:0;box-shadow:inset 0 0 0 2px var(--green);font-weight:700}
+
+/* Offset the light selected-state line inside a dark outer edge. */
+.site-nav a[aria-current="page"],.carousel button[aria-pressed="true"],.artwork details[open]>summary{box-shadow:inset 0 0 0 4px #171713,inset 0 0 0 5px var(--green)}
+/* Gallery cards use two columns only on large screens. */
+.gallery{display:grid;grid-template-columns:minmax(0,1fr);gap:48px}
+.gallery .artwork{width:100%;min-width:0;margin:0}
+.gallery{padding-bottom:65px}
+@media(min-width:1200px){
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+}
+
+.artwork>h3{font-style:italic;font-synthesis:style}
+
+/* Unselected buttons have no border or inset line. */
+.site-nav a:not([aria-current="page"]),.carousel button:not([aria-pressed="true"]),.button,.artwork details:not([open])>summary{border:0;box-shadow:none}
+
+/* Selection changes colour and inset decoration without changing button size. */
+.site-nav a,.site-nav a[aria-current="page"],.carousel button,.carousel button[aria-pressed="true"]{height:44px;min-height:44px;font-weight:600;box-sizing:border-box}
+.site-nav a{flex:1 1 0}
+.view-buttons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.view-buttons button{min-width:0}
+.artwork summary,.artwork details[open]>summary{font-weight:400}
+@media(max-width:750px){.view-buttons{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.checkout-placeholder{display:flex;flex-direction:column;align-items:center;gap:8px}
+.checkout-placeholder small{font-size:14px;color:var(--muted)}
+.button:disabled{cursor:not-allowed;opacity:.7}
+.button:disabled:hover{background:var(--green);color:var(--paper)}
+
+/* Cream closing sections extend visually to both edges of the browser. */
+.end-note,.statement,.merch{background:var(--green);color:var(--paper);box-shadow:0 0 0 100vmax var(--green);clip-path:inset(0 -100vmax)}
+.end-note em,.statement blockquote,.merch em{color:#2a2b28}
+.statement>p:not(.eyebrow),.merch p:not(.eyebrow),.merch figcaption{color:#45463f}
+.end-note .button,.statement .button,.merch .button{background:var(--paper);color:var(--green)}
+.end-note .button:hover,.statement .button:hover,.merch .button:hover{background:#2a2b28;color:var(--green)}
+
+.purchase .product-description{font-size:16px;line-height:1.6;color:var(--muted);margin:8px 0;max-width:380px}
+
+.artwork-information{padding:12px 0 24px}
+.artwork-information p{font-size:16px;line-height:1.7;color:var(--muted);margin:8px 0}
+.artwork-information .artwork-detail-title{font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:400;font-style:normal;color:var(--ink);margin:0 0 12px}
+.artwork-information p>span{color:var(--ink)}
+
+.end-note em{color:#646357}
+
+.end-note{display:flex;align-items:center;justify-content:center;padding-top:65px;padding-bottom:65px}
+.end-note h2{margin:0}
+
+/* Muted cream for the gallery closing section. */
+.end-note{background:#aaa18b;box-shadow:0 0 0 100vmax #aaa18b}
+.end-note em{color:#48483f}
+
+.end-note{background:#454640;color:var(--green);box-shadow:0 0 0 100vmax #454640}
+.end-note em{color:var(--green)}
+
+.end-note em{color:#c2b596}
+
+/* Alternating chapters of the artist’s story. */
+.artist-journey{padding:65px 8% 80px;display:grid;gap:60px}
+.journey-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:60px;align-items:center}
+.journey-placeholder{aspect-ratio:4/3;background:#2a2b28;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:18px}
+.journey-copy p{font-size:20px;line-height:1.9;margin:0;color:var(--ink)}
+@media(max-width:750px){
+  .artist-journey{padding:40px 6% 55px;gap:40px}
+  .journey-row{grid-template-columns:1fr;gap:24px}
+  .journey-row-reversed .journey-placeholder{order:-1}
+  .journey-copy p{font-size:18px}
+}
+
+.journey-image img{width:100%;height:auto;max-height:480px;object-fit:contain}
+@media(max-width:750px){.journey-row-reversed .journey-image{order:-1}}
+
+/* Fill each story image column rather than containing a fixed-size image. */
+.journey-row{align-items:stretch;min-height:360px}
+.journey-image{position:relative;min-width:0;overflow:hidden}
+.journey-image img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:cover}
+.journey-copy{display:flex;align-items:center;padding:35px 0}
+@media(max-width:750px){
+  .journey-row{min-height:0}
+  .journey-image{aspect-ratio:4/3}
+  .journey-copy{padding:0}
+}
+
+/* Blend the first story image into the background beside its text. */
+.artist-journey .journey-row:first-child .journey-image img{
+  -webkit-mask-image:linear-gradient(to right,#000 0%,#000 70%,transparent 100%);
+  mask-image:linear-gradient(to right,#000 0%,#000 70%,transparent 100%);
+}
+@media(max-width:750px){
+  .artist-journey .journey-row:first-child .journey-image img{
+    -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 70%,transparent 100%);
+    mask-image:linear-gradient(to bottom,#000 0%,#000 70%,transparent 100%);
+  }
+}
+
+.artist-journey .journey-row:nth-child(2) .journey-image img{
+  -webkit-mask-image:linear-gradient(to left,#000 0%,#000 70%,transparent 100%);
+  mask-image:linear-gradient(to left,#000 0%,#000 70%,transparent 100%);
+}
+.artist-journey .journey-row:nth-child(3) .journey-image img{
+  -webkit-mask-image:linear-gradient(to right,#000 0%,#000 70%,transparent 100%);
+  mask-image:linear-gradient(to right,#000 0%,#000 70%,transparent 100%);
+}
+@media(max-width:750px){
+  .artist-journey .journey-row:nth-child(2) .journey-image img,
+  .artist-journey .journey-row:nth-child(3) .journey-image img{
+    -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 70%,transparent 100%);
+    mask-image:linear-gradient(to bottom,#000 0%,#000 70%,transparent 100%);
+  }
+}
+
+
+/* Full-width top sections; retain the content width below them. */
+.site-header{max-width:none;width:100%;margin:0}
+main{max-width:none;width:100%}
+main>section:not(.hero){max-width:1600px;margin-left:auto;margin-right:auto}
+.site-header .brand,.site-nav{padding-left:max(6%,calc((100% - 1408px)/2));padding-right:max(6%,calc((100% - 1408px)/2))}
+
+.purchase[hidden]{display:none}
+
+/* On small screens, checkout sits below its item details and spans the card. */
+@media(max-width:750px){
+  .purchase{flex-direction:column;align-items:stretch;gap:18px;padding-bottom:0}
+  .purchase>div:first-child{width:100%}
+  .purchase>.button,.purchase>.checkout-placeholder{width:100%;margin-left:0;margin-right:0}
+  .purchase .checkout-placeholder{align-items:stretch}
+  .purchase .checkout-placeholder small{order:-1;text-align:center}
+  .purchase .checkout-placeholder .button{width:100%;min-height:44px}
+}
+
+/* Keep the four artwork views on one row, including narrow screens. */
+.view-buttons{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+@media(max-width:1199px){
+  .view-buttons button{font-size:16px;padding-left:4px;padding-right:4px;white-space:nowrap}
+}
+
+/* Keep the three main navigation items on one row at every screen size. */
+.site-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.site-nav a{min-width:0;white-space:nowrap}
+
+.artwork>h3{padding-top:16px}
+
+/* Product photographs provide the base for artwork previews. */
+.photo-mockup{position:relative;width:min(100%,900px);flex-shrink:0}
+.photo-mockup .mockup-background{width:100%;height:auto;display:block}
+.photo-mockup .product-print{position:absolute;overflow:hidden;mix-blend-mode:multiply}
+.photo-mockup .product-print img{width:100%;height:100%;object-fit:contain}
+.mug-photo .product-print{left:34%;top:28%;width:28%;height:57%;border-radius:8% 8% 15% 15%;transform:perspective(600px) rotateY(-8deg)}
+.shirt-photo .product-print{left:40%;top:41%;width:25%;height:28%;transform:rotate(2deg)}

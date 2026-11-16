@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+const faqs = [
+ ['How can I purchase a piece?', 'Purchase options are listed under each artwork in the gallery. Once an item is available, its Buy button will take you to a Stripe checkout. Purchases are not open yet.'],
+ ['Are originals and prints available?', 'Availability, dimensions, materials, and prices will be listed alongside each piece once confirmed.'],
+ ['Does the art come with a frame or a Certificate of Authenticity?', 'Framing and certificate details will be specified on each product before it goes on sale.'],
+ ['How much is shipping? Do you ship internationally?', 'Shipping destinations, costs, packaging, and delivery estimates are being confirmed and will be published before sales open.'],
+ ['What is the quality of the T-shirts?', 'The shirt brand, fabric, sizing, and care instructions will be provided when the merchandise collection launches.'],
+ ['Where can I see Eric’s art in person?', 'Exhibition information will be added here when dates and locations are confirmed.'],
+ ['What is the return policy?', 'The return and refund policy will be published before purchases become available.'],
+];
+---
+<Layout title="FAQs"><Hero title="FAQs" caption="You're not the first to ask, but you are the best looking" /><section class="faq-list" aria-label="Frequently asked questions">{faqs.map(([question,answer]) => <details name="faq"><summary>{question}<span class="plus">+</span></summary><p>{answer}</p></details>)}</section></Layout>

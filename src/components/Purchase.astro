@@ -1,0 +1,6 @@
+---
+import { stripeLink } from '../data/artworks';
+const { link, price, label, details = '' } = Astro.props;
+const url = price ? stripeLink(link) : null;
+---
+<div class="purchase" data-product={label.toLowerCase()}><div><span>{label}</span>{details && <p class="product-description">{details}</p>}<strong>{price || 'Details coming soon'}</strong></div>{url ? <a class="button" href={url}>Buy {label.toLowerCase()} ↗</a> : <div class="checkout-placeholder"><button class="button" type="button" disabled aria-label={`Buy ${label.toLowerCase()} — checkout coming soon`}>Buy {label.toLowerCase()}</button><small>Checkout coming soon</small></div>}</div>
